@@ -364,8 +364,6 @@ Discarded input sections
                 0x00000000        0x3 src\main.o
  .text.display_on_LCD
                 0x00000000       0x1c src\main.o
- .text.init_LEDs
-                0x00000000       0x24 src\main.o
  .debug_macro   0x00000000      0xa60 src\main.o
  .debug_macro   0x00000000       0x2e src\main.o
  .debug_macro   0x00000000       0x22 src\main.o
@@ -3891,168 +3889,168 @@ END GROUP
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x448
+.debug_aranges  0x00000000      0x440
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x30 src\initialize-hardware.o
  .debug_aranges
-                0x00000030       0x30 src\main.o
+                0x00000030       0x28 src\main.o
  .debug_aranges
-                0x00000060       0x38 src\stm32f0xx_hal_msp.o
+                0x00000058       0x38 src\stm32f0xx_hal_msp.o
  .debug_aranges
-                0x00000098       0x28 system\src\cmsis\system_stm32f0xx.o
+                0x00000090       0x28 system\src\cmsis\system_stm32f0xx.o
  .debug_aranges
-                0x000000c0       0x20 system\src\cmsis\vectors_stm32f051x8.o
+                0x000000b8       0x20 system\src\cmsis\vectors_stm32f051x8.o
  .debug_aranges
-                0x000000e0       0x58 system\src\cortexm\exception-handlers.o
+                0x000000d8       0x58 system\src\cortexm\exception-handlers.o
  .debug_aranges
-                0x00000138       0x28 system\src\cortexm\initialize-hardware.o
+                0x00000130       0x28 system\src\cortexm\initialize-hardware.o
  .debug_aranges
-                0x00000160       0x30 system\src\diag\trace-impl.o
+                0x00000158       0x30 system\src\diag\trace-impl.o
  .debug_aranges
-                0x00000190       0x38 system\src\diag\trace.o
+                0x00000188       0x38 system\src\diag\trace.o
  .debug_aranges
-                0x000001c8       0x28 system\src\newlib\exit.o
+                0x000001c0       0x28 system\src\newlib\exit.o
  .debug_aranges
-                0x000001f0       0x20 system\src\newlib\sbrk.o
+                0x000001e8       0x20 system\src\newlib\sbrk.o
  .debug_aranges
-                0x00000210       0x40 system\src\newlib\startup.o
+                0x00000208       0x40 system\src\newlib\startup.o
  .debug_aranges
-                0x00000250       0x30 system\src\newlib\syscalls.o
+                0x00000248       0x30 system\src\newlib\syscalls.o
  .debug_aranges
-                0x00000280       0xd0 system\src\stm32f0-hal\stm32f0xx_hal.o
+                0x00000278       0xd0 system\src\stm32f0-hal\stm32f0xx_hal.o
  .debug_aranges
-                0x00000350       0x78 system\src\stm32f0-hal\stm32f0xx_hal_cortex.o
+                0x00000348       0x78 system\src\stm32f0-hal\stm32f0xx_hal_cortex.o
  .debug_aranges
-                0x000003c8       0x80 system\src\stm32f0-hal\stm32f0xx_hal_rcc.o
+                0x000003c0       0x80 system\src\stm32f0-hal\stm32f0xx_hal_rcc.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000     0x3935
+.debug_info     0x00000000     0x377e
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000      0x1c2 src\initialize-hardware.o
- .debug_info    0x000001c2      0x2e2 src\main.o
- .debug_info    0x000004a4       0xbf src\stm32f0xx_hal_msp.o
- .debug_info    0x00000563      0x277 system\src\cmsis\system_stm32f0xx.o
- .debug_info    0x000007da       0xcd system\src\cmsis\vectors_stm32f051x8.o
- .debug_info    0x000008a7      0x349 system\src\cortexm\exception-handlers.o
- .debug_info    0x00000bf0       0xcf system\src\cortexm\initialize-hardware.o
- .debug_info    0x00000cbf      0x320 system\src\diag\trace-impl.o
- .debug_info    0x00000fdf      0x30b system\src\diag\trace.o
- .debug_info    0x000012ea       0xf2 system\src\newlib\exit.o
- .debug_info    0x000013dc      0x112 system\src\newlib\sbrk.o
- .debug_info    0x000014ee      0x4ae system\src\newlib\startup.o
- .debug_info    0x0000199c      0x1d5 system\src\newlib\syscalls.o
- .debug_info    0x00001b71      0x789 system\src\stm32f0-hal\stm32f0xx_hal.o
- .debug_info    0x000022fa      0x927 system\src\stm32f0-hal\stm32f0xx_hal_cortex.o
- .debug_info    0x00002c21      0xd14 system\src\stm32f0-hal\stm32f0xx_hal_rcc.o
+ .debug_info    0x000001c2      0x12b src\main.o
+ .debug_info    0x000002ed       0xbf src\stm32f0xx_hal_msp.o
+ .debug_info    0x000003ac      0x277 system\src\cmsis\system_stm32f0xx.o
+ .debug_info    0x00000623       0xcd system\src\cmsis\vectors_stm32f051x8.o
+ .debug_info    0x000006f0      0x349 system\src\cortexm\exception-handlers.o
+ .debug_info    0x00000a39       0xcf system\src\cortexm\initialize-hardware.o
+ .debug_info    0x00000b08      0x320 system\src\diag\trace-impl.o
+ .debug_info    0x00000e28      0x30b system\src\diag\trace.o
+ .debug_info    0x00001133       0xf2 system\src\newlib\exit.o
+ .debug_info    0x00001225      0x112 system\src\newlib\sbrk.o
+ .debug_info    0x00001337      0x4ae system\src\newlib\startup.o
+ .debug_info    0x000017e5      0x1d5 system\src\newlib\syscalls.o
+ .debug_info    0x000019ba      0x789 system\src\stm32f0-hal\stm32f0xx_hal.o
+ .debug_info    0x00002143      0x927 system\src\stm32f0-hal\stm32f0xx_hal_cortex.o
+ .debug_info    0x00002a6a      0xd14 system\src\stm32f0-hal\stm32f0xx_hal_rcc.o
 
-.debug_abbrev   0x00000000     0x153f
+.debug_abbrev   0x00000000     0x14f8
  *(.debug_abbrev)
  .debug_abbrev  0x00000000       0xca src\initialize-hardware.o
- .debug_abbrev  0x000000ca      0x127 src\main.o
- .debug_abbrev  0x000001f1       0x47 src\stm32f0xx_hal_msp.o
- .debug_abbrev  0x00000238      0x134 system\src\cmsis\system_stm32f0xx.o
- .debug_abbrev  0x0000036c       0xa5 system\src\cmsis\vectors_stm32f051x8.o
- .debug_abbrev  0x00000411      0x182 system\src\cortexm\exception-handlers.o
- .debug_abbrev  0x00000593       0x67 system\src\cortexm\initialize-hardware.o
- .debug_abbrev  0x000005fa      0x1eb system\src\diag\trace-impl.o
- .debug_abbrev  0x000007e5      0x173 system\src\diag\trace.o
- .debug_abbrev  0x00000958       0x97 system\src\newlib\exit.o
- .debug_abbrev  0x000009ef       0xcd system\src\newlib\sbrk.o
- .debug_abbrev  0x00000abc      0x1b1 system\src\newlib\startup.o
- .debug_abbrev  0x00000c6d      0x10e system\src\newlib\syscalls.o
- .debug_abbrev  0x00000d7b      0x25b system\src\stm32f0-hal\stm32f0xx_hal.o
- .debug_abbrev  0x00000fd6      0x2f7 system\src\stm32f0-hal\stm32f0xx_hal_cortex.o
- .debug_abbrev  0x000012cd      0x272 system\src\stm32f0-hal\stm32f0xx_hal_rcc.o
+ .debug_abbrev  0x000000ca       0xe0 src\main.o
+ .debug_abbrev  0x000001aa       0x47 src\stm32f0xx_hal_msp.o
+ .debug_abbrev  0x000001f1      0x134 system\src\cmsis\system_stm32f0xx.o
+ .debug_abbrev  0x00000325       0xa5 system\src\cmsis\vectors_stm32f051x8.o
+ .debug_abbrev  0x000003ca      0x182 system\src\cortexm\exception-handlers.o
+ .debug_abbrev  0x0000054c       0x67 system\src\cortexm\initialize-hardware.o
+ .debug_abbrev  0x000005b3      0x1eb system\src\diag\trace-impl.o
+ .debug_abbrev  0x0000079e      0x173 system\src\diag\trace.o
+ .debug_abbrev  0x00000911       0x97 system\src\newlib\exit.o
+ .debug_abbrev  0x000009a8       0xcd system\src\newlib\sbrk.o
+ .debug_abbrev  0x00000a75      0x1b1 system\src\newlib\startup.o
+ .debug_abbrev  0x00000c26      0x10e system\src\newlib\syscalls.o
+ .debug_abbrev  0x00000d34      0x25b system\src\stm32f0-hal\stm32f0xx_hal.o
+ .debug_abbrev  0x00000f8f      0x2f7 system\src\stm32f0-hal\stm32f0xx_hal_cortex.o
+ .debug_abbrev  0x00001286      0x272 system\src\stm32f0-hal\stm32f0xx_hal_rcc.o
 
-.debug_line     0x00000000     0x7437
+.debug_line     0x00000000     0x7412
  *(.debug_line)
  .debug_line    0x00000000      0x8dc src\initialize-hardware.o
- .debug_line    0x000008dc      0x8d8 src\main.o
- .debug_line    0x000011b4      0x653 src\stm32f0xx_hal_msp.o
- .debug_line    0x00001807      0x6db system\src\cmsis\system_stm32f0xx.o
- .debug_line    0x00001ee2      0x120 system\src\cmsis\vectors_stm32f051x8.o
- .debug_line    0x00002002      0xa00 system\src\cortexm\exception-handlers.o
- .debug_line    0x00002a02      0x65e system\src\cortexm\initialize-hardware.o
- .debug_line    0x00003060      0x99d system\src\diag\trace-impl.o
- .debug_line    0x000039fd      0x471 system\src\diag\trace.o
- .debug_line    0x00003e6e      0x385 system\src\newlib\exit.o
- .debug_line    0x000041f3      0x370 system\src\newlib\sbrk.o
- .debug_line    0x00004563      0x5ed system\src\newlib\startup.o
- .debug_line    0x00004b50      0x48c system\src\newlib\syscalls.o
- .debug_line    0x00004fdc      0x938 system\src\stm32f0-hal\stm32f0xx_hal.o
- .debug_line    0x00005914      0xa0f system\src\stm32f0-hal\stm32f0xx_hal_cortex.o
- .debug_line    0x00006323     0x1114 system\src\stm32f0-hal\stm32f0xx_hal_rcc.o
+ .debug_line    0x000008dc      0x8b3 src\main.o
+ .debug_line    0x0000118f      0x653 src\stm32f0xx_hal_msp.o
+ .debug_line    0x000017e2      0x6db system\src\cmsis\system_stm32f0xx.o
+ .debug_line    0x00001ebd      0x120 system\src\cmsis\vectors_stm32f051x8.o
+ .debug_line    0x00001fdd      0xa00 system\src\cortexm\exception-handlers.o
+ .debug_line    0x000029dd      0x65e system\src\cortexm\initialize-hardware.o
+ .debug_line    0x0000303b      0x99d system\src\diag\trace-impl.o
+ .debug_line    0x000039d8      0x471 system\src\diag\trace.o
+ .debug_line    0x00003e49      0x385 system\src\newlib\exit.o
+ .debug_line    0x000041ce      0x370 system\src\newlib\sbrk.o
+ .debug_line    0x0000453e      0x5ed system\src\newlib\startup.o
+ .debug_line    0x00004b2b      0x48c system\src\newlib\syscalls.o
+ .debug_line    0x00004fb7      0x938 system\src\stm32f0-hal\stm32f0xx_hal.o
+ .debug_line    0x000058ef      0xa0f system\src\stm32f0-hal\stm32f0xx_hal_cortex.o
+ .debug_line    0x000062fe     0x1114 system\src\stm32f0-hal\stm32f0xx_hal_rcc.o
 
-.debug_frame    0x00000000      0xbf4
+.debug_frame    0x00000000      0xbe4
  *(.debug_frame)
  .debug_frame   0x00000000       0x58 src\initialize-hardware.o
- .debug_frame   0x00000058       0x48 src\main.o
- .debug_frame   0x000000a0       0x50 src\stm32f0xx_hal_msp.o
- .debug_frame   0x000000f0       0x38 system\src\cmsis\system_stm32f0xx.o
- .debug_frame   0x00000128       0x20 system\src\cmsis\vectors_stm32f051x8.o
- .debug_frame   0x00000148       0xb0 system\src\cortexm\exception-handlers.o
- .debug_frame   0x000001f8       0x40 system\src\cortexm\initialize-hardware.o
- .debug_frame   0x00000238       0x60 system\src\diag\trace-impl.o
- .debug_frame   0x00000298       0x78 system\src\diag\trace.o
- .debug_frame   0x00000310       0x38 system\src\newlib\exit.o
- .debug_frame   0x00000348       0x28 system\src\newlib\sbrk.o
- .debug_frame   0x00000370       0x80 system\src\newlib\startup.o
- .debug_frame   0x000003f0       0x50 system\src\newlib\syscalls.o
- .debug_frame   0x00000440      0x1b0 system\src\stm32f0-hal\stm32f0xx_hal.o
- .debug_frame   0x000005f0      0x114 system\src\stm32f0-hal\stm32f0xx_hal_cortex.o
- .debug_frame   0x00000704      0x144 system\src\stm32f0-hal\stm32f0xx_hal_rcc.o
- .debug_frame   0x00000848       0x20 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
- .debug_frame   0x00000868       0x20 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-errno.o)
- .debug_frame   0x00000888       0x48 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-vsnprintf.o)
- .debug_frame   0x000008d0       0x74 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-nano-svfprintf.o)
- .debug_frame   0x00000944       0x54 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
- .debug_frame   0x00000998       0x20 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-memchr-stub.o)
- .debug_frame   0x000009b8       0x28 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
- .debug_frame   0x000009e0       0x28 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-memmove.o)
- .debug_frame   0x00000a08       0x2c c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-nano-freer.o)
- .debug_frame   0x00000a34       0x50 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
- .debug_frame   0x00000a84       0x34 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-nano-reallocr.o)
- .debug_frame   0x00000ab8       0x2c c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-sbrkr.o)
- .debug_frame   0x00000ae4       0x40 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-mlock.o)
- .debug_frame   0x00000b24       0x20 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-nano-msizer.o)
- .debug_frame   0x00000b44       0xb0 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-lock.o)
+ .debug_frame   0x00000058       0x38 src\main.o
+ .debug_frame   0x00000090       0x50 src\stm32f0xx_hal_msp.o
+ .debug_frame   0x000000e0       0x38 system\src\cmsis\system_stm32f0xx.o
+ .debug_frame   0x00000118       0x20 system\src\cmsis\vectors_stm32f051x8.o
+ .debug_frame   0x00000138       0xb0 system\src\cortexm\exception-handlers.o
+ .debug_frame   0x000001e8       0x40 system\src\cortexm\initialize-hardware.o
+ .debug_frame   0x00000228       0x60 system\src\diag\trace-impl.o
+ .debug_frame   0x00000288       0x78 system\src\diag\trace.o
+ .debug_frame   0x00000300       0x38 system\src\newlib\exit.o
+ .debug_frame   0x00000338       0x28 system\src\newlib\sbrk.o
+ .debug_frame   0x00000360       0x80 system\src\newlib\startup.o
+ .debug_frame   0x000003e0       0x50 system\src\newlib\syscalls.o
+ .debug_frame   0x00000430      0x1b0 system\src\stm32f0-hal\stm32f0xx_hal.o
+ .debug_frame   0x000005e0      0x114 system\src\stm32f0-hal\stm32f0xx_hal_cortex.o
+ .debug_frame   0x000006f4      0x144 system\src\stm32f0-hal\stm32f0xx_hal_rcc.o
+ .debug_frame   0x00000838       0x20 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/thumb/v6-m/nofp\libgcc.a(_udivsi3.o)
+ .debug_frame   0x00000858       0x20 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-errno.o)
+ .debug_frame   0x00000878       0x48 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-vsnprintf.o)
+ .debug_frame   0x000008c0       0x74 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-nano-svfprintf.o)
+ .debug_frame   0x00000934       0x54 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-nano-vfprintf_i.o)
+ .debug_frame   0x00000988       0x20 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-memchr-stub.o)
+ .debug_frame   0x000009a8       0x28 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-memcpy-stub.o)
+ .debug_frame   0x000009d0       0x28 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-memmove.o)
+ .debug_frame   0x000009f8       0x2c c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-nano-freer.o)
+ .debug_frame   0x00000a24       0x50 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-nano-mallocr.o)
+ .debug_frame   0x00000a74       0x34 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-nano-reallocr.o)
+ .debug_frame   0x00000aa8       0x2c c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-sbrkr.o)
+ .debug_frame   0x00000ad4       0x40 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-mlock.o)
+ .debug_frame   0x00000b14       0x20 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-nano-msizer.o)
+ .debug_frame   0x00000b34       0xb0 c:/program files (x86)/gnu arm embedded toolchain/10 2021.10/bin/../lib/gcc/arm-none-eabi/10.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp\libg_nano.a(lib_a-lock.o)
 
-.debug_str      0x00000000    0x72c8d
+.debug_str      0x00000000    0x72c83
  *(.debug_str)
  .debug_str     0x00000000    0x6e2e7 src\initialize-hardware.o
                               0x6e567 (size before relaxing)
- .debug_str     0x0006e2e7     0x1a2e src\main.o
-                              0x6ef06 (size before relaxing)
- .debug_str     0x0006fd15       0x57 src\stm32f0xx_hal_msp.o
+ .debug_str     0x0006e2e7     0x199f src\main.o
+                              0x6ee6e (size before relaxing)
+ .debug_str     0x0006fc86       0x57 src\stm32f0xx_hal_msp.o
                               0x6aedf (size before relaxing)
- .debug_str     0x0006fd6c       0x7d system\src\cmsis\system_stm32f0xx.o
+ .debug_str     0x0006fcdd       0xd0 system\src\cmsis\system_stm32f0xx.o
                               0x6af8d (size before relaxing)
- .debug_str     0x0006fde9       0x9f system\src\cmsis\vectors_stm32f051x8.o
+ .debug_str     0x0006fdad       0x9f system\src\cmsis\vectors_stm32f051x8.o
                                0x37ad (size before relaxing)
- .debug_str     0x0006fe88      0x162 system\src\cortexm\exception-handlers.o
+ .debug_str     0x0006fe4c      0x162 system\src\cortexm\exception-handlers.o
                               0x6f627 (size before relaxing)
- .debug_str     0x0006ffea       0x48 system\src\cortexm\initialize-hardware.o
+ .debug_str     0x0006ffae       0x48 system\src\cortexm\initialize-hardware.o
                               0x6af20 (size before relaxing)
- .debug_str     0x00070032      0x317 system\src\diag\trace-impl.o
+ .debug_str     0x0006fff6      0x317 system\src\diag\trace-impl.o
                               0x6e817 (size before relaxing)
- .debug_str     0x00070349      0x15c system\src\diag\trace.o
+ .debug_str     0x0007030d      0x15c system\src\diag\trace.o
                                0x7e93 (size before relaxing)
- .debug_str     0x000704a5      0x10f system\src\newlib\exit.o
+ .debug_str     0x00070469      0x10f system\src\newlib\exit.o
                                0x770c (size before relaxing)
- .debug_str     0x000705b4      0x4dd system\src\newlib\sbrk.o
+ .debug_str     0x00070578      0x4dd system\src\newlib\sbrk.o
                                0x6aed (size before relaxing)
- .debug_str     0x00070a91      0x22e system\src\newlib\startup.o
+ .debug_str     0x00070a55      0x22e system\src\newlib\startup.o
                                0x62f3 (size before relaxing)
- .debug_str     0x00070cbf     0x14f4 system\src\newlib\syscalls.o
+ .debug_str     0x00070c83     0x14f4 system\src\newlib\syscalls.o
                                0x803a (size before relaxing)
- .debug_str     0x000721b3      0x581 system\src\stm32f0-hal\stm32f0xx_hal.o
+ .debug_str     0x00072177      0x581 system\src\stm32f0-hal\stm32f0xx_hal.o
                               0x6b550 (size before relaxing)
- .debug_str     0x00072734      0x1c8 system\src\stm32f0-hal\stm32f0xx_hal_cortex.o
+ .debug_str     0x000726f8      0x1c8 system\src\stm32f0-hal\stm32f0xx_hal_cortex.o
                               0x6b337 (size before relaxing)
- .debug_str     0x000728fc      0x391 system\src\stm32f0-hal\stm32f0xx_hal_rcc.o
+ .debug_str     0x000728c0      0x3c3 system\src\stm32f0-hal\stm32f0xx_hal_rcc.o
                               0x6b3af (size before relaxing)
 
 .debug_loc      0x00000000     0x1625
@@ -4088,23 +4086,23 @@ END GROUP
 OUTPUT(mec4126f_prac5_DVSCAM002.elf elf32-littlearm)
 LOAD linker stubs
 
-.debug_ranges   0x00000000      0x3d8
+.debug_ranges   0x00000000      0x3d0
  .debug_ranges  0x00000000       0x20 src\initialize-hardware.o
- .debug_ranges  0x00000020       0x20 src\main.o
- .debug_ranges  0x00000040       0x28 src\stm32f0xx_hal_msp.o
- .debug_ranges  0x00000068       0x18 system\src\cmsis\system_stm32f0xx.o
- .debug_ranges  0x00000080       0x10 system\src\cmsis\vectors_stm32f051x8.o
- .debug_ranges  0x00000090       0x48 system\src\cortexm\exception-handlers.o
- .debug_ranges  0x000000d8       0x18 system\src\cortexm\initialize-hardware.o
- .debug_ranges  0x000000f0       0x38 system\src\diag\trace-impl.o
- .debug_ranges  0x00000128       0x28 system\src\diag\trace.o
- .debug_ranges  0x00000150       0x18 system\src\newlib\exit.o
- .debug_ranges  0x00000168       0x10 system\src\newlib\sbrk.o
- .debug_ranges  0x00000178       0x30 system\src\newlib\startup.o
- .debug_ranges  0x000001a8       0x20 system\src\newlib\syscalls.o
- .debug_ranges  0x000001c8       0xc0 system\src\stm32f0-hal\stm32f0xx_hal.o
- .debug_ranges  0x00000288       0xc8 system\src\stm32f0-hal\stm32f0xx_hal_cortex.o
- .debug_ranges  0x00000350       0x88 system\src\stm32f0-hal\stm32f0xx_hal_rcc.o
+ .debug_ranges  0x00000020       0x18 src\main.o
+ .debug_ranges  0x00000038       0x28 src\stm32f0xx_hal_msp.o
+ .debug_ranges  0x00000060       0x18 system\src\cmsis\system_stm32f0xx.o
+ .debug_ranges  0x00000078       0x10 system\src\cmsis\vectors_stm32f051x8.o
+ .debug_ranges  0x00000088       0x48 system\src\cortexm\exception-handlers.o
+ .debug_ranges  0x000000d0       0x18 system\src\cortexm\initialize-hardware.o
+ .debug_ranges  0x000000e8       0x38 system\src\diag\trace-impl.o
+ .debug_ranges  0x00000120       0x28 system\src\diag\trace.o
+ .debug_ranges  0x00000148       0x18 system\src\newlib\exit.o
+ .debug_ranges  0x00000160       0x10 system\src\newlib\sbrk.o
+ .debug_ranges  0x00000170       0x30 system\src\newlib\startup.o
+ .debug_ranges  0x000001a0       0x20 system\src\newlib\syscalls.o
+ .debug_ranges  0x000001c0       0xc0 system\src\stm32f0-hal\stm32f0xx_hal.o
+ .debug_ranges  0x00000280       0xc8 system\src\stm32f0-hal\stm32f0xx_hal_cortex.o
+ .debug_ranges  0x00000348       0x88 system\src\stm32f0-hal\stm32f0xx_hal_rcc.o
 
 .debug_macro    0x00000000    0x138a1
  .debug_macro   0x00000000      0x3cb src\initialize-hardware.o
