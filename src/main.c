@@ -21,25 +21,45 @@ void display_on_LCD(uint8_t num);
 void init_LEDs(void);
 void display_on_LEDs(uint8_t val);
 void init_switches();
+void delay(unsigned int ms);
+uint8_t readSwitches();
+uint8_t SW1Pressed();
+uint8_t SW2Pressed();
 
 // MAIN FUNCTION -------------------------------------------------------------|
 
 void main(void)
 {	init_LEDs();
-	display_on_LEDs(2);
+	init_switches();
+	init_LCD();
+	char count=0;
 
 
-	while(1)
-	{
+	while(1) {
+		delay(50000);
+		if (SW1Pressed()){
+			count+=1;
+		}
+		if (SW2Pressed()){
+			count-=1;
+		};
+
+		display_on_LCD(count);
+		display_on_LEDs(count);
+
+
 
 	}
 }
 // OTHER FUNCTIONS -----------------------------------------------------------|
 
-void display_on_LCD(uint8_t num){ //function to intiate LED
+void display_on_LCD(uint8_t num){
+	lcd_command(CLEAR);  //function to intiate LED
 	char str[3];
 	sprintf(str,"%d",num);
 	lcd_putstring(str);
+
+
 }
 
 void init_LEDs(void){
@@ -65,4 +85,20 @@ void init_switches(){
 				 GPIO_PUPDR_PUPDR1_0|
 				 GPIO_PUPDR_PUPDR2_0);
 }
+
+uint8_t readSwitches(){
+	 return GPIOA-> IDR & 0b110;
+}
+
+uint8_t SW1Pressed(){
+	readSwitches();
+	return readSwitches() & 0b010 ? 0:1;
+
+ }
+
+uint8_t SW2Pressed(){
+	readSwitches();
+	return readSwitches() & 0b100 ? 0:1;
+
+ }
 
