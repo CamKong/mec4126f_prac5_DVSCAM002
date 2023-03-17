@@ -20,6 +20,7 @@ void main(void);
 void display_on_LCD(uint8_t num);
 void init_LEDs(void);
 void display_on_LEDs(uint8_t val);
+void init_switches();
 
 // MAIN FUNCTION -------------------------------------------------------------|
 
@@ -58,5 +59,10 @@ void display_on_LEDs(uint8_t val){
 	GPIOB-> ODR = val;
 }
 
-
+void init_switches(){
+	RCC->AHBENR |= RCC_AHBENR_GPIOAEN;
+	GPIOA->PUPDR |= (
+				 GPIO_PUPDR_PUPDR1_0|
+				 GPIO_PUPDR_PUPDR2_0);
+}
 
