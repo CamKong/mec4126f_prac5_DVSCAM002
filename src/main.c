@@ -27,6 +27,7 @@ uint8_t SW1Pressed();
 uint8_t SW2Pressed();
 uint8_t SW3Pressed();
 void init_external_interrupts(void);
+void EXTI2_3_IRQHandler(void);
 uint8_t SW3_count=0; // sets push button 3 count to 0
 
 // MAIN FUNCTION -------------------------------------------------------------|
@@ -35,23 +36,36 @@ void main(void)
 {	init_LEDs();
 	init_switches();
 	init_LCD();
-	char count=0;
+	init_external_interrupts();
+	uint8_t count=0;
 
 
-	while(1) {
-		delay(50000);
-		if (SW1Pressed()){
-			count+=1;
+	while(1)
+	{
+
+		if((SW3_count)%2 != 0) //checks to see if SW3 count is positive or negative, if negative..
+			{
+
+				display_on_LCD(count); //displays count on LCD
+				delay(50000);
+				if (SW1Pressed()) //checks if SW1 has been pressed
+				{
+					if (count==255); //ignores if higher than 255
+					else{			//increments if value is less than 255
+						count+=1;
+					}
+				}
+				else if (SW2Pressed()){ //decrements count if SW2 is pressed
+					count-=1;
+				}
+
+				display_on_LCD(count); //displays count on LCD
+				display_on_LEDs(count); //displays count on LED
+
+			}
+		else{
+			lcd_command(CLEAR);
 		}
-		if (SW2Pressed()){
-			count-=1;
-		};
-
-		display_on_LCD(count);
-		display_on_LEDs(count);
-
-
-
 	}
 }
 // OTHER FUNCTIONS -----------------------------------------------------------|
@@ -114,12 +128,17 @@ uint8_t SW3Pressed(){
  }
 
 void init_external_interrupts(void){
-	RCC->APB2ENR|=RCC_APB2ENR_SYSCFGCOMPEN;
-	SYSCFG->EXTICR[0]|=SYSCFG_EXTICR1_EXTI3_PA;
-	EXTI->IMR |=EXTI_IMR_IM3;
-	EXTI->FTSR |=EXTI_FTSR_TR3;
+	RCC->APB2ENR|=RCC_APB2ENR_SYSCFGCOMPEN; //enable clock for sysconfig
+	SYSCFG->EXTICR[0]|=SYSCFG_EXTICR1_EXTI3_PA; //route PA to EXTI3
+	EXTI->IMR |=EXTI_IMR_IM3;					//unmask the interrupt on PA3
+	EXTI->FTSR |=EXTI_FTSR_TR3;					//falling edge trigger
 
-	NVIC_EnableIRQ(EXTI2_3_IRQn);
+	NVIC_EnableIRQ(EXTI2_3_IRQn);				//enable the EXTI2_3 interrupt on NVIC
 
 
+}
+
+void EXTI2_3_IRQHandler(void){
+	SW3_count+=1;		//increment the SW3 counter
+	EXTI->PR|=EXTI_PR_PR3;// clear the interrupt pending bit by writing to it
 }
